@@ -11,11 +11,13 @@ class Edge
 	public:
 		using VertexType = Vector2<T>;
 		
-		Edge(const VertexType &p1, const VertexType &p2) : p1(p1), p2(p2), isBad(false) {};
-		Edge(const Edge &e) : p1(e.p1), p2(e.p2), isBad(false) {};
+		Edge(const VertexType &p1, const VertexType &p2, T w=-1) : p1(p1), p2(p2), weight(w) {};
+		Edge(const Edge &e) : p1(e.p1), p2(e.p2), weight(e.weight), isBad(false) {};
+		Edge(): p1(0,0), p2(0,0), weight(0), isBad(false) {}
 
 		VertexType p1;
 		VertexType p2;
+        T weight=0;
 
 		bool isBad;
 };
