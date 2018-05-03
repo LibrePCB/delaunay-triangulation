@@ -3,6 +3,8 @@
 
 #include "vector2.h"
 
+namespace delaunay {
+
 template <class T>
 class Edge
 {
@@ -29,6 +31,8 @@ inline bool operator == (const Edge<T> & e1, const Edge<T> & e2)
 {
 	return 	(e1.p1 == e2.p1 && e1.p2 == e2.p2) ||
 			(e1.p1 == e2.p2 && e1.p2 == e2.p1);
+}
+
 }
 
 #endif 

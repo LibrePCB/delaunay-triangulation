@@ -7,6 +7,8 @@
 #include <assert.h>
 #include <math.h>
 
+namespace delaunay {
+
 template <class T>
 class Triangle
 {
@@ -62,5 +64,6 @@ inline bool operator == (const Triangle<T> &t1, const Triangle<T> &t2)
 			(t1.p3 == t2.p1 || t1.p3 == t2.p2 || t1.p3 == t2.p3);
 }
 
+}
 
 #endif

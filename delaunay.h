@@ -8,6 +8,8 @@
 #include <vector>
 #include <algorithm>
 
+namespace delaunay {
+
 template <class T>
 class Delaunay
 {
@@ -126,5 +128,7 @@ class Delaunay
 		std::vector<EdgeType> _edges;
 		std::vector<VertexType> _vertices;
 };
+
+}
 
 #endif

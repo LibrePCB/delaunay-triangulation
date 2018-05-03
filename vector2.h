@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 
+namespace delaunay {
+
 template <typename T>
 class Vector2
 {
@@ -66,6 +68,8 @@ template<typename T>
 bool operator == (Vector2<T> v1, Vector2<T> v2)
 {
 	return (v1.x == v2.x) && (v1.y == v2.y);
+}
+
 }
 	
 #endif
