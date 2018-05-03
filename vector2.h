@@ -20,28 +20,24 @@ class Vector2
 			y = 0;
 		}
 
-		Vector2(T _x, T _y) 
+		Vector2(T _x, T _y, int aid=0)
 		{
 			x = _x;
 			y = _y;
+			id = aid;
 		}
 
 		Vector2(const Vector2 &v)
 		{
 			x = v.x;
 			y = v.y;
-		}
-
-		void set(const Vector2 &v)
-		{
-			x = v.x;
-			y = v.y;
+			id = v.id;
 		}
 
 		//
 		// Operations
 		//	
-		T dist2(const Vector2 &v)
+		T dist2(const Vector2 &v) const
 		{
 			T dx = x - v.x;
 			T dy = y - v.y;
@@ -55,13 +51,14 @@ class Vector2
 
 		T x;
 		T y;
-
+		int id=0;
+		int tag=0;
 };
 
 template<typename T>
 std::ostream &operator << (std::ostream &str, Vector2<T> const &point) 
 {
-	return str << "Point x: " << point.x << " y: " << point.y;
+	return str << "Point x: " << point.x << " y: " << point.y << " tag: " << point.tag;
 }
 
 template<typename T>
